@@ -3,8 +3,6 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export const runtime = 'edge'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const TOPIC_LABELS: Record<string, string> = {
   dev: 'Desarrollo de software',
   consulting: 'Consultoría tecnológica',
@@ -28,6 +26,8 @@ async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
 
 export async function POST(req: NextRequest) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    
     const { name, email, topic, message, token } = await req.json()
 
     if (!name || !email || !topic || !message || !token) {
