@@ -1,0 +1,7 @@
+name = "somos-luci"
+compatibility_date = "2024-05-26"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Aquí irán las variables de entorno si decides no usar el dashboard
+# RESEND_API_KEY = "..."
