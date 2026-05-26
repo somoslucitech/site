@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(mkdir -p /home/leyner/Escritorio/SomosLuci/site/.claude/skills/taste-skill)"
+    ],
+    "additionalDirectories": [
+      "/home/leyner/Escritorio/SomosLuci/site/.claude/skills"
+    ]
+  }
+}
