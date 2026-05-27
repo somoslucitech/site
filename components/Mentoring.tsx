@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { InlineWidget } from 'react-calendly'
 import {
   VideoCamera,
   CheckCircle,
@@ -137,34 +138,21 @@ export default function Mentoring() {
                   <span className="text-xs text-slate-400 dark:text-slate-500 font-mono">30 min · Gratis</span>
                 </div>
 
-                {/*
-                  REEMPLAZÁ este bloque por tu embed real de Calendly:
-                  <div
-                    className="calendly-inline-widget"
-                    data-url={process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/TU-USUARIO/mentoria-30min'}
-                    style={{ minWidth: '320px', height: '700px' }}
+                <div className="min-h-[450px]">
+                  <InlineWidget
+                    url={process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/somosluci/mentoria-30min'}
+                    styles={{
+                      height: '450px',
+                      width: '100%',
+                    }}
+                    pageSettings={{
+                      backgroundColor: 'ffffff',
+                      hideEventTypeDetails: true,
+                      hideLandingPageDetails: true,
+                      primaryColor: '00ced1',
+                      textColor: '0f172a',
+                    }}
                   />
-                  <script src="https://assets.calendly.com/assets/external/widget.js" async />
-                */}
-                <div className="p-6 flex flex-col items-center justify-center text-center gap-3 min-h-[280px]">
-                  <div className="w-14 h-14 rounded-2xl bg-[#00CED1]/10 flex items-center justify-center mb-2">
-                    <CalendarBlank size={28} className="text-[#00CED1]" weight="duotone" />
-                  </div>
-                  <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
-                    Calendario de Calendly
-                  </p>
-                  <p className="text-xs text-slate-400 dark:text-slate-500 max-w-[28ch] leading-relaxed">
-                    Aquí se incrustará tu calendario de Calendly para agendar directamente.
-                  </p>
-                  <a
-                    href={process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com'}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#00CED1] text-white text-xs font-semibold hover:bg-[#00B5B8] transition-colors"
-                  >
-                    Ver disponibilidad
-                    <ArrowRight size={12} weight="bold" />
-                  </a>
                 </div>
               </div>
 
