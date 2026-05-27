@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { List, X, Sun, Moon } from '@phosphor-icons/react'
 import { useTheme } from '@/components/ThemeProvider'
 
@@ -114,8 +115,13 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-[10px] bg-[#00CED1] flex items-center justify-center shadow-[0_4px_14px_0_rgba(0,206,209,0.4)] group-hover:shadow-[0_6px_20px_0_rgba(0,206,209,0.5)] transition-shadow duration-300">
-              <span className="text-white font-bold text-xs tracking-tighter">SL</span>
+            <div className="relative w-8 h-8 rounded-[10px] overflow-hidden shadow-[0_4px_14px_0_rgba(0,206,209,0.4)] group-hover:shadow-[0_6px_20px_0_rgba(0,206,209,0.5)] transition-shadow duration-300">
+              <Image
+                src="/apple-touch-icon.png"
+                alt="Somos Luci Logo"
+                fill
+                className="object-cover"
+              />
             </div>
             <span className="font-semibold text-slate-900 dark:text-white tracking-tight text-[15px]">
               Somos <span className="text-[#00CED1]">Luci</span>

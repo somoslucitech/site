@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const SOCIAL_LINKS = [
   { label: 'LinkedIn', href: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? 'https://linkedin.com/company/somosluci' },
@@ -23,8 +24,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-[10px] bg-[#00CED1] flex items-center justify-center shadow-[0_4px_14px_0_rgba(0,206,209,0.3)]">
-                <span className="text-white font-bold text-xs tracking-tighter">SL</span>
+              <div className="relative w-8 h-8 rounded-[10px] overflow-hidden shadow-[0_4px_14px_0_rgba(0,206,209,0.3)]">
+                <Image
+                  src="/apple-touch-icon.png"
+                  alt="Somos Luci Logo"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <span className="font-semibold text-white tracking-tight text-[15px]">
                 Somos <span className="text-[#00CED1]">Luci</span>
