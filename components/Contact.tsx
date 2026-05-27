@@ -137,7 +137,7 @@ export default function Contact() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
                 </span>
-                <span className="text-sm text-slate-700 dark:text-slate-300 font-medium">Menos de 24 horas hábiles</span>
+                <span className="text-sm text-slate-700 dark:text-slate-300 font-medium">Menos de 2 horas hábiles</span>
               </div>
             </div>
           </motion.div>
@@ -167,7 +167,7 @@ export default function Contact() {
                       Mensaje enviado
                     </h3>
                     <p className="text-sm text-slate-500 dark:text-slate-400 max-w-[32ch] leading-relaxed">
-                      Nos ponemos en contacto dentro de las próximas 24 horas hábiles.
+                      Nos ponemos en contacto dentro de las próximas 2 horas hábiles.
                     </p>
                     <button
                       onClick={() => {
@@ -311,7 +311,7 @@ export default function Contact() {
                     </motion.button>
 
                     <p className="text-[11px] text-slate-400 dark:text-slate-500 text-center">
-                      Respondemos en menos de 24 horas hábiles.
+                      Respondemos en menos de 2 horas hábiles.
                     </p>
                   </motion.form>
                 )}
