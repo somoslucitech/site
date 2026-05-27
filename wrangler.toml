@@ -1,6 +1,12 @@
 name = "somos-luci"
-compatibility_date = "2024-05-26"
+compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
+
+main = ".open-next/worker.js"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
 
 [vars]
 # Aquí irán las variables de entorno si decides no usar el dashboard

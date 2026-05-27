@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
 
-export const runtime = 'edge'
+// export const runtime = 'edge'
 
 const TOPIC_LABELS: Record<string, string> = {
   dev: 'Desarrollo de software',
