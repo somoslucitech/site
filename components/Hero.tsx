@@ -61,9 +61,11 @@ export default function Hero() {
               variants={item}
               className="text-[52px] md:text-[60px] lg:text-[68px] font-bold tracking-tighter leading-[1.02] text-slate-900 dark:text-white mb-6"
             >
-              Lleva tu idea
+              De la idea al código 
               <br />
-              <span className="text-[#00CED1]">a la realidad.</span>
+              <span className="text-[#00CED1]">en semanas.</span>
+              <br />
+              no meses.
             </motion.h1>
 
             {/* Sub */}
@@ -71,9 +73,7 @@ export default function Hero() {
               variants={item}
               className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[52ch] mb-9"
             >
-              Convertimos tu visión en software real. Desde el primer wireframe
-              hasta el deploy. Con un proceso claro, entregas concretas y
-              cero stress.
+              Convertimos tu visión en software real con un proceso ágil, entregas semanales y cero sorpresas en el camino.
             </motion.p>
 
             {/* CTAs */}
@@ -87,7 +87,7 @@ export default function Hero() {
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[12px] bg-[#FACC15] text-slate-900 font-semibold text-sm shadow-[0_6px_24px_0_rgba(250,204,21,0.45)] hover:shadow-[0_8px_32px_0_rgba(250,204,21,0.55)] transition-shadow duration-300"
               >
-                Agendar llamada gratuita
+                Iniciar mi proyecto
                 <ArrowRight size={15} weight="bold" />
               </motion.a>
               <motion.a
@@ -181,7 +181,7 @@ export default function Hero() {
                   <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">Satisfacción</span>
                 </div>
                 <p className="text-[28px] font-bold text-slate-900 dark:text-white tracking-tighter leading-none">
-                  98.3<span className="text-sm font-semibold text-[#00CED1]">%</span>
+                  99.9<span className="text-sm font-semibold text-[#00CED1]">%</span>
                 </p>
               </div>
             </motion.div>
