@@ -4,7 +4,11 @@
       "Bash(gh repo *)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(mkdir -p /home/leyner/Escritorio/SomosLuci/site/.claude/skills/taste-skill)"
+      "Bash(mkdir -p /home/leyner/Escritorio/SomosLuci/site/.claude/skills/taste-skill)",
+      "Bash(npm run *)",
+      "Bash(npx next *)",
+      "Bash(node_modules/.bin/next build *)",
+      "Bash(npm install *)"
     ],
     "additionalDirectories": [
       "/home/leyner/Escritorio/SomosLuci/site/.claude/skills"

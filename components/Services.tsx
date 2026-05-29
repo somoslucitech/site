@@ -10,10 +10,6 @@ import {
   GitBranch,
   Database,
   CloudArrowUp,
-  MagnifyingGlass,
-  PencilSimple,
-  Code,
-  RocketLaunch,
 } from '@phosphor-icons/react'
 
 const reveal = {
@@ -26,13 +22,6 @@ const reveal = {
 }
 
 const TECH_TAGS = ['Next.js', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'AWS']
-
-const PROCESS_STEPS = [
-  { n: '01', label: 'Descubrimiento', desc: 'Entendemos tu negocio, tus usuarios y definimos el alcance real.', icon: MagnifyingGlass },
-  { n: '02', label: 'Diseño', desc: 'Arquitectura limpia, wireframes y decisiones técnicas con foco en UX.', icon: PencilSimple },
-  { n: '03', label: 'Desarrollo', desc: 'Sprints cortos con entregas incrementales y código revisado.', icon: Code },
-  { n: '04', label: 'Implementación', desc: 'Deploy, documentación completa y soporte post-lanzamiento.', icon: RocketLaunch },
-]
 
 export default function Services() {
   return (
@@ -163,42 +152,6 @@ export default function Services() {
             </div>
           </motion.div>
         </div>
-
-        {/* Process strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: 'spring', stiffness: 90, damping: 20, delay: 0.15 }}
-        >
-          <div className="rounded-[2rem] border border-slate-100 dark:border-slate-800 bg-[#F8FAFC] dark:bg-slate-900 p-8 md:p-10 overflow-hidden">
-            <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 dark:text-slate-500 mb-10">
-              Cómo trabajamos
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {PROCESS_STEPS.map(({ n, label, desc, icon: Icon }) => (
-                <div key={n} className="relative flex flex-col">
-
-                  {/* Línea continua — se extiende al gap en cada lado para conectar sin saltos */}
-                  <div className="hidden lg:block absolute top-[23px] -left-4 -right-4 h-[1.5px] bg-[#00CED1]/15 dark:bg-[#00CED1]/10 z-0" />
-
-                  {/* Ícono con badge numérico */}
-                  <div className="relative z-10 mb-5 w-fit">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#00CED1] to-[#00B5B8] flex items-center justify-center shadow-[0_6px_20px_0_rgba(0,206,209,0.35)]">
-                      <Icon size={20} className="text-white" weight="bold" />
-                    </div>
-                    <div className="absolute -top-[7px] -right-[7px] w-[22px] h-[22px] rounded-full bg-[#F8FAFC] dark:bg-slate-900 border-2 border-[#00CED1] flex items-center justify-center shadow-sm">
-                      <span className="font-mono text-[9px] font-bold text-[#00CED1] leading-none">{n}</span>
-                    </div>
-                  </div>
-
-                  <h4 className="text-base font-bold text-slate-900 dark:text-white mb-1.5 tracking-tight">{label}</h4>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
 
         {/* Tech icons strip */}
         <motion.div

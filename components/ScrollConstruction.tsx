@@ -10,10 +10,10 @@ interface ProcessStep {
 }
 
 const steps: ProcessStep[] = [
-  { num: '01', label: 'Descubrimiento', desc: 'Entendemos tu negocio, tus usuarios y definimos el alcance real del proyecto.' },
-  { num: '02', label: 'Diseño', desc: 'Arquitectura limpia, wireframes y decisiones técnicas con foco en experiencia de usuario.' },
-  { num: '03', label: 'Desarrollo', desc: 'Sprints cortos con entregas incrementales. Código limpio y revisado en cada paso.' },
-  { num: '04', label: 'Entrega', desc: 'Deploy, documentación completa y soporte post-lanzamiento incluido.' },
+  { num: '01', label: 'Llamada de descubrimiento', desc: 'Agendás una videollamada gratuita de 30 minutos. Nos contás tu idea y definimos juntos qué necesitás construir.' },
+  { num: '02', label: 'Propuesta técnica', desc: 'En 48h recibís una propuesta con alcance, tecnologías, tiempos y presupuesto. Sin letra chica.' },
+  { num: '03', label: 'Desarrollo iterativo', desc: 'Construimos con sprints cortos de 1–2 semanas. Revisás el avance, ajustamos y seguimos.' },
+  { num: '04', label: 'Lanzamiento a producción', desc: 'Deploy, documentación completa y soporte post-lanzamiento incluido. Tu producto, listo para el mundo.' },
 ]
 
 interface BlockData {
@@ -92,7 +92,7 @@ export default function ScrollConstruction() {
   const glowOpacity = useTransform(scrollYProgress, [0.85, 0.9, 0.95, 1], [0, 0, 0.6, 0])
 
   return (
-    <section ref={containerRef} className="relative h-[250vh] bg-white">
+    <section id="proceso" ref={containerRef} className="relative h-[250vh] bg-white dark:bg-slate-950">
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden px-6 py-12">
         <div className="mx-auto w-full max-w-5xl grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-12 items-center">
 
@@ -100,17 +100,17 @@ export default function ScrollConstruction() {
           <div className="flex flex-col gap-10">
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase text-[#00CED1] mb-3">
-                Cómo trabajamos
+                El proceso
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 leading-[1.08]">
-                Construimos paso
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white leading-[1.08]">
+                De la llamada
                 <br />
-                <span className="text-slate-400">a paso.</span>
+                <span className="text-slate-400 dark:text-slate-500">al producto.</span>
               </h2>
             </div>
 
             <div className="relative flex flex-col gap-8">
-              <div className="absolute bottom-0 left-[23px] top-0 w-[2px] bg-[#E2E8F0]" />
+              <div className="absolute bottom-0 left-[23px] top-0 w-[2px] bg-slate-200 dark:bg-slate-800" />
 
               {steps.map((step, i) => {
                 const isActive = activePhase >= i
@@ -120,7 +120,7 @@ export default function ScrollConstruction() {
                       className={`relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 font-bold font-mono text-sm transition-all duration-500 ${
                         isActive
                           ? 'border-[#00CED1] bg-[#00CED1] text-white shadow-[0_4px_14px_0_rgba(0,206,209,0.4)]'
-                          : 'border-[#E2E8F0] bg-[#F1F5F9] text-slate-400'
+                          : 'border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-400'
                       }`}
                     >
                       {step.num}
@@ -128,15 +128,15 @@ export default function ScrollConstruction() {
 
                     <div className="flex flex-col pt-2">
                       <h3
-                        className={`text-xl font-bold tracking-tight transition-colors duration-500 ${
-                          isActive ? 'text-[#00CED1]' : 'text-slate-500'
+                        className={`text-lg font-bold tracking-tight transition-colors duration-500 ${
+                          isActive ? 'text-[#00CED1]' : 'text-slate-500 dark:text-slate-500'
                         }`}
                       >
                         {step.label}
                       </h3>
                       <p
                         className={`mt-2 max-w-sm text-sm leading-relaxed transition-all duration-500 md:text-base ${
-                          isActive ? 'opacity-100 text-slate-600' : 'opacity-0 text-slate-400'
+                          isActive ? 'opacity-100 text-slate-600 dark:text-slate-300' : 'opacity-0 text-slate-400'
                         }`}
                       >
                         {step.desc}
@@ -146,11 +146,17 @@ export default function ScrollConstruction() {
                 )
               })}
             </div>
+
+            <a
+              href="#contacto"
+              className="w-fit inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-[#FACC15] text-slate-900 text-sm font-semibold shadow-[0_4px_14px_0_rgba(250,204,21,0.4)] hover:shadow-[0_6px_20px_0_rgba(250,204,21,0.55)] transition-shadow duration-300"
+            >
+              Empezar con una llamada
+            </a>
           </div>
 
           {/* Right — construction grid */}
           <div className="relative flex items-center justify-center">
-            {/* Radiant glow */}
             <motion.div
               style={{
                 scale: glowScale,
@@ -161,7 +167,6 @@ export default function ScrollConstruction() {
               className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full"
             />
 
-            {/* Block grid */}
             <div className="relative z-10 grid grid-cols-6 gap-[4px]">
               {blocksData.map((block) => (
                 <motion.div
@@ -170,7 +175,8 @@ export default function ScrollConstruction() {
                   variants={blockVariants}
                   initial="empty"
                   animate={activePhase >= block.phase ? 'filled' : 'empty'}
-                  className="h-8 w-8 rounded-lg border-2 md:h-10 md:w-10"
+                  className="h-8 w-8 rounded-lg border-2 md:h-10 md:w-10 dark:border-slate-700"
+                  style={activePhase < block.phase ? { backgroundColor: 'var(--block-empty, #F1F5F9)' } : {}}
                 />
               ))}
             </div>

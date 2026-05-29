@@ -9,7 +9,7 @@ import { useTheme } from '@/components/ThemeProvider'
 
 const NAV_LINKS = [
   { label: 'Servicios', href: '#servicios' },
-  { label: 'Formación', href: '#formacion' },
+  { label: 'Proceso', href: '#proceso' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
@@ -114,8 +114,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-8 h-8 rounded-[10px] overflow-hidden shadow-[0_4px_14px_0_rgba(0,206,209,0.4)] group-hover:shadow-[0_6px_20px_0_rgba(0,206,209,0.5)] transition-shadow duration-300">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-10 h-10 rounded-[12px] overflow-hidden shadow-[0_4px_16px_0_rgba(0,206,209,0.45)] group-hover:shadow-[0_6px_24px_0_rgba(0,206,209,0.6)] transition-shadow duration-300">
               <Image
                 src="/apple-touch-icon.png"
                 alt="Somos Luci Logo"
@@ -123,7 +123,7 @@ export default function Navbar() {
                 className="object-cover"
               />
             </div>
-            <span className="font-semibold text-slate-900 dark:text-white tracking-tight text-[15px]">
+            <span className="font-bold text-slate-900 dark:text-white tracking-tight text-[18px]">
               Somos <span className="text-[#00CED1]">Luci</span>
             </span>
           </Link>
@@ -146,12 +146,12 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <DarkModeToggle />
             <motion.a
-              href="#formacion"
+              href="#contacto"
               whileHover={{ scale: 1.02, y: -1 }}
               whileTap={{ scale: 0.97 }}
               className="px-4 py-2 rounded-[10px] bg-[#FACC15] text-slate-900 text-sm font-semibold shadow-[0_4px_14px_0_rgba(250,204,21,0.4)] hover:shadow-[0_6px_20px_0_rgba(250,204,21,0.55)] transition-shadow duration-300"
             >
-              Agendar mentoría
+              Agendar llamada
             </motion.a>
           </div>
 
@@ -191,11 +191,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="#formacion"
+                href="#contacto"
                 className="mt-4 px-4 py-3 rounded-[10px] bg-[#FACC15] text-slate-900 text-sm font-semibold text-center"
                 onClick={() => setMenuOpen(false)}
               >
-                Agendar mentoría
+                Agendar llamada
               </a>
             </div>
           </motion.div>
