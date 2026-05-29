@@ -211,6 +211,31 @@ export default function Hero() {
               </div>
             </motion.div>
 
+            {/* Card E — Central Logo */}
+            <motion.div
+              variants={cardEntry(0.9)}
+              initial="hidden"
+              animate="visible"
+              className="absolute top-[200px] left-[140px] z-10"
+            >
+              <div className="glass-card rounded-2xl p-3.5 animate-float-a flex flex-col items-center gap-2 group shadow-[0_8px_32px_0_rgba(0,206,209,0.15)]">
+                <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-500">
+                  <Image
+                    src="/apple-touch-icon.png"
+                    alt="Somos Luci Logo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-[10px] font-bold text-slate-900 dark:text-white tracking-tight">
+                    Somos <span className="text-[#00CED1]">Luci</span>
+                  </span>
+                  <div className="h-[1px] w-4 bg-[#00CED1]/30 mt-1" />
+                </div>
+              </div>
+            </motion.div>
+
             {/* Decorative glow blob */}
             <div
               className="absolute inset-0 -z-10 rounded-3xl opacity-30"
