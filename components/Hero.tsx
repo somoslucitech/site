@@ -61,11 +61,9 @@ export default function Hero() {
               variants={item}
               className="text-[52px] md:text-[60px] lg:text-[68px] font-bold tracking-tighter leading-[1.02] text-slate-900 dark:text-white mb-6"
             >
-              De la idea
+              Lleva tu idea
               <br />
-              al producto.{' '}
-              <br />
-              <span className="text-[#00CED1]">En producción.</span>
+              <span className="text-[#00CED1]">a la realidad.</span>
             </motion.h1>
 
             {/* Sub */}
@@ -75,7 +73,7 @@ export default function Hero() {
             >
               Convertimos tu visión en software real. Desde el primer wireframe
               hasta el deploy. Con un proceso claro, entregas concretas y
-              cero humo.
+              cero stress.
             </motion.p>
 
             {/* CTAs */}
