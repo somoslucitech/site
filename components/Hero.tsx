@@ -52,7 +52,7 @@ export default function Hero() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00CED1] opacity-75" />
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#00CED1]" />
                 </span>
-                Agencia de Desarrollo de Software
+                Software & Consultoría Premium
               </span>
             </motion.div>
 
@@ -61,11 +61,9 @@ export default function Hero() {
               variants={item}
               className="text-[52px] md:text-[60px] lg:text-[68px] font-bold tracking-tighter leading-[1.02] text-slate-900 dark:text-white mb-6"
             >
-              De la idea al código 
+              Software que escala 
               <br />
-              <span className="text-[#00CED1]">en semanas.</span>
-              <br />
-              no meses.
+              <span className="text-[#00CED1]">en tiempo récord.</span>
             </motion.h1>
 
             {/* Sub */}
@@ -73,7 +71,7 @@ export default function Hero() {
               variants={item}
               className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[52ch] mb-9"
             >
-              Convertimos tu visión en software real con un proceso ágil, entregas semanales y cero sorpresas en el camino.
+              Construimos productos digitales de alto rendimiento y asesoramos a empresas en su roadmap tecnológico. Sin burocracia, solo código excepcional.
             </motion.p>
 
             {/* CTAs */}

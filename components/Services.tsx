@@ -37,12 +37,12 @@ export default function Services() {
           className="mb-16"
         >
           <p className="text-xs font-semibold tracking-widest uppercase text-[#00CED1] mb-3">
-            Lo que construimos
+            Nuestras especialidades
           </p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white max-w-xl leading-[1.08]">
-            Software que funciona.
+            Ingeniería de software.
             <br />
-            <span className="text-slate-400 dark:text-slate-500">Sin excusas.</span>
+            <span className="text-slate-400 dark:text-slate-500">Con rigor técnico.</span>
           </h2>
         </motion.div>
 
@@ -76,19 +76,19 @@ export default function Services() {
                 </div>
 
                 <h3 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-3">
-                  Desarrollo Web & Apps
+                  Desarrollo de MVPs & Apps
                 </h3>
                 <p className="text-slate-500 dark:text-slate-400 text-[15px] leading-relaxed mb-7 max-w-[50ch]">
-                  Construimos aplicaciones web modernas, escalables y bien diseñadas.
-                  Desde MVPs de alto impacto hasta sistemas empresariales complejos.
+                  Construimos aplicaciones web modernas y escalables diseñadas para traccionar. 
+                  Enfocados en performance, seguridad y una experiencia de usuario impecable.
                 </p>
 
                 <ul className="space-y-2.5 mb-8">
                   {[
-                    'Arquitectura limpia y mantenible',
-                    'Diseño UI/UX de alto nivel incluido',
-                    'Optimizadas para velocidad y SEO',
-                    'Entrega en sprints cada 1–2 semanas',
+                    'Arquitectura robusta en Next.js & TypeScript',
+                    'Diseño UI/UX orientado a conversión',
+                    'Infraestructura escalable y segura',
+                    'Entregas funcionales cada 7 días',
                   ].map((feat) => (
                     <li key={feat} className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
                       <CheckCircle size={14} weight="fill" className="text-[#00CED1] flex-shrink-0" />
@@ -128,20 +128,19 @@ export default function Services() {
               </div>
 
               <h3 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-3">
-                Consultoría
+                CTO as a Service
                 <br />
-                Tecnológica
+                & Consultoría
               </h3>
               <p className="text-slate-500 dark:text-slate-400 text-[15px] leading-relaxed mb-7 flex-1">
-                Auditamos tu stack actual, definimos la hoja de ruta técnica y
-                acompañamos decisiones críticas de arquitectura.
+                Acompañamos tus decisiones técnicas críticas, auditamos tu stack y definimos roadmaps de escalabilidad.
               </p>
 
               <ul className="space-y-2.5 mt-auto">
                 {[
-                  'Auditoría de código y arquitectura',
-                  'Selección de stack tecnológico',
-                  'Roadmap y planificación técnica',
+                  'Auditoría de código y seguridad',
+                  'Estrategia técnica para startups',
+                  'Selección de stack y optimización',
                 ].map((feat) => (
                   <li key={feat} className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
                     <CheckCircle size={14} weight="fill" className="text-amber-400 flex-shrink-0" />

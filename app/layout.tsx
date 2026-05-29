@@ -18,20 +18,21 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Somos Luci — Software & Mentoría Premium',
+  title: 'Somos Luci — Software & Consultoría Premium',
   description:
-    'Desarrollamos software a medida y formamos a los profesionales tech del mañana. Mentoría 1:1 personalizada por Google Meet.',
+    'Desarrollamos software a medida con un enfoque ágil y consultoría tecnológica de alto nivel. De la idea al código en semanas, no meses.',
   keywords: [
     'desarrollo de software',
-    'mentoría tecnología',
+    'agencia de software',
+    'consultoría tecnológica',
     'programación',
     'Next.js',
-    'cursos tech',
-    'carrera en tecnología',
+    'TypeScript',
+    'MVP',
   ],
   openGraph: {
-    title: 'Somos Luci — Software & Mentoría Premium',
-    description: 'Del cero al primer deployment. Con alguien al lado.',
+    title: 'Somos Luci — Software & Consultoría Premium',
+    description: 'De la idea al código en semanas, no meses.',
     type: 'website',
   },
   icons: {
@@ -52,6 +53,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           dangerouslySetInnerHTML={{
             __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfessionalService',
+              name: 'Somos Luci',
+              image: 'https://somosluci.com/apple-touch-icon.png',
+              '@id': 'https://somosluci.com',
+              url: 'https://somosluci.com',
+              telephone: '',
+              address: {
+                '@type': 'PostalAddress',
+                addressCountry: 'ES',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 0,
+                longitude: 0,
+              },
+              openingHoursSpecification: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '09:00',
+                closes: '18:00',
+              },
+              sameAs: [],
+              description:
+                'Agencia de desarrollo de software boutique especializada en MVPs, aplicaciones web modernas y consultoría tecnológica de alto nivel.',
+            }),
           }}
         />
       </head>
