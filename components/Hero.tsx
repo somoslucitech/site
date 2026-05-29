@@ -118,14 +118,14 @@ export default function Hero() {
           </motion.div>
 
           {/* ── Right column: floating cards ── */}
-          <div className="relative h-[500px] hidden lg:block">
+          <div className="relative h-[560px] hidden lg:block">
 
-            {/* Card A — terminal */}
+            {/* Card A — terminal (Shifted Up/Right) */}
             <motion.div
               variants={cardEntry(0.7)}
               initial="hidden"
               animate="visible"
-              className="absolute top-6 right-2 w-56"
+              className="absolute top-2 right-0 w-56"
             >
               <div className="glass-card rounded-2xl p-4 animate-float-a">
                 <div className="flex items-center gap-1.5 mb-3">
@@ -144,12 +144,12 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card B — proyectos */}
+            {/* Card B — proyectos (Shifted Left) */}
             <motion.div
               variants={cardEntry(0.85)}
               initial="hidden"
               animate="visible"
-              className="absolute top-[210px] -left-2 w-44"
+              className="absolute top-[230px] -left-8 w-44"
             >
               <div className="glass-card rounded-2xl p-4 animate-float-b">
                 <div className="flex items-center gap-2 mb-2">
@@ -165,12 +165,12 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card C — satisfacción */}
+            {/* Card C — satisfacción (Shifted Down/Right) */}
             <motion.div
               variants={cardEntry(1.0)}
               initial="hidden"
               animate="visible"
-              className="absolute top-[340px] right-12 w-40"
+              className="absolute top-[420px] right-4 w-40"
             >
               <div className="glass-card rounded-2xl p-4 animate-float-c">
                 <div className="flex items-center gap-2 mb-2">
@@ -185,12 +185,12 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card D — primera llamada */}
+            {/* Card D — primera llamada (Shifted Up/Left) */}
             <motion.div
               variants={cardEntry(1.15)}
               initial="hidden"
               animate="visible"
-              className="absolute top-[100px] left-28 w-44"
+              className="absolute top-[70px] left-12 w-44"
             >
               <div className="glass-card rounded-2xl p-3.5 animate-float-d">
                 <div className="flex items-center gap-2.5">
@@ -212,15 +212,15 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card E — Central Logo */}
+            {/* Card E — Central Logo (Enlarged & Centered) */}
             <motion.div
               variants={cardEntry(0.9)}
               initial="hidden"
               animate="visible"
-              className="absolute top-[200px] left-[140px] z-10"
+              className="absolute top-[180px] left-[130px] z-20"
             >
-              <div className="glass-card rounded-2xl p-3.5 animate-float-a flex flex-col items-center gap-2 group shadow-[0_8px_32px_0_rgba(0,206,209,0.15)]">
-                <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-500">
+              <div className="glass-card rounded-[2.5rem] p-8 animate-float-a flex flex-col items-center gap-4 group shadow-[0_12px_48px_0_rgba(0,206,209,0.25)] border-[#00CED1]/20">
+                <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-2xl group-hover:scale-110 transition-transform duration-700">
                   <Image
                     src="/apple-touch-icon.png"
                     alt="Somos Luci Logo"
@@ -229,10 +229,10 @@ export default function Hero() {
                   />
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-[10px] font-bold text-slate-900 dark:text-white tracking-tight">
+                  <span className="text-[20px] font-bold text-slate-900 dark:text-white tracking-tighter">
                     Somos <span className="text-[#00CED1]">Luci</span>
                   </span>
-                  <div className="h-[1px] w-4 bg-[#00CED1]/30 mt-1" />
+                  <div className="h-[2px] w-8 bg-[#00CED1] mt-2 rounded-full opacity-50" />
                 </div>
               </div>
             </motion.div>
