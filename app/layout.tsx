@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Outfit, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import CookieBanner from '@/components/CookieBanner'
 import './globals.css'
 
 const outfit = Outfit({
@@ -114,7 +116,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           {children}
         </ThemeProvider>
+        <CookieBanner />
+        <GoogleAnalytics gaId="G-2KXC6JL45P" />
       </body>
     </html>
+  )
+}
+>
   )
 }
