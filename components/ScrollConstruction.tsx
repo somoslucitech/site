@@ -11,7 +11,7 @@ interface ProcessStep {
 
 const steps: ProcessStep[] = [
   { num: '01', label: 'Llamada de descubrimiento', desc: 'Agendás una videollamada gratuita de 30 minutos. Nos contás tu idea y definimos juntos qué necesitás construir.' },
-  { num: '02', label: 'Propuesta técnica', desc: 'En 48h recibís una propuesta con alcance, tecnologías, tiempos y presupuesto. Sin letra chica.' },
+  { num: '02', label: 'Propuesta técnica', desc: 'En 48h recibís una propuesta con alcance, tecnologías, tiempos, presupuesto y cláusula de confidencialidad. Sin letra chica.' },
   { num: '03', label: 'Desarrollo iterativo', desc: 'Construimos con sprints cortos de 1–2 semanas. Revisás el avance, ajustamos y seguimos.' },
   { num: '04', label: 'Lanzamiento a producción', desc: 'Deploy, documentación completa y soporte post-lanzamiento incluido. Tu producto, listo para el mundo.' },
 ]
