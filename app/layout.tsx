@@ -66,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@id': 'https://somosluci.com',
               url: 'https://somosluci.com',
               telephone: '',
+              priceRange: '$$',
               address: {
                 '@type': 'PostalAddress',
                 addressCountry: 'ES',
@@ -81,7 +82,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 opens: '09:00',
                 closes: '18:00',
               },
-              sameAs: [],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Servicios de Desarrollo y Consultoría',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Desarrollo de MVPs & Apps',
+                      description: 'Construcción de aplicaciones web escalables en semanas.',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'CTO as a Service',
+                      description: 'Consultoría técnica estratégica y auditorías de código.',
+                    },
+                  },
+                ],
+              },
               description:
                 'Agencia de desarrollo de software boutique especializada en MVPs, aplicaciones web modernas y consultoría tecnológica de alto nivel.',
             }),
