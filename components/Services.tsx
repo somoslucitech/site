@@ -25,7 +25,7 @@ const TECH_TAGS = ['Next.js', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'A
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-28 bg-white dark:bg-slate-950">
+    <section id="servicios" className="py-6 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
@@ -34,7 +34,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 90, damping: 20 }}
-          className="mb-16"
+          className="mb-10"
         >
           <p className="text-xs font-semibold tracking-widest uppercase text-[#00CED1] mb-3">
             Nuestras especialidades

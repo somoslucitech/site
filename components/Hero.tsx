@@ -70,15 +70,32 @@ export default function Hero() {
             {/* Sub */}
             <motion.p
               variants={item}
-              className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[52ch] mb-9"
+              className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[52ch] mb-7"
             >
               Construimos productos digitales de alto rendimiento y asesoramos a empresas en su roadmap tecnológico. Sin burocracia, solo código excepcional.
             </motion.p>
 
+            {/* Trust line — Moved above CTAs to avoid the bottom gradient and ensure visibility */}
+            <motion.div
+              variants={item}
+              className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-10"
+            >
+              {[
+                'Primera llamada gratis',
+                'Entrega en sprints',
+                'Soporte post-lanzamiento',
+              ].map((t) => (
+                <div key={t} className="flex items-center gap-2 text-[15px] font-medium text-slate-700 dark:text-slate-300">
+                  <CheckCircle size={18} weight="fill" className="text-[#00CED1] flex-shrink-0" />
+                  {t}
+                </div>
+              ))}
+            </motion.div>
+
             {/* CTAs */}
             <motion.div
               variants={item}
-              className="flex flex-wrap items-center gap-3 mb-10"
+              className="flex flex-wrap items-center gap-3"
             >
               <motion.a
                 href="#contacto"
@@ -97,23 +114,6 @@ export default function Hero() {
               >
                 Ver cómo funciona
               </motion.a>
-            </motion.div>
-
-            {/* Trust line */}
-            <motion.div
-              variants={item}
-              className="flex flex-wrap items-center gap-x-5 gap-y-2"
-            >
-              {[
-                'Primera llamada gratis',
-                'Entrega en sprints',
-                'Soporte post-lanzamiento',
-              ].map((t) => (
-                <div key={t} className="flex items-center gap-1.5 text-[13px] text-slate-400 dark:text-slate-500">
-                  <CheckCircle size={13} weight="fill" className="text-[#00CED1] flex-shrink-0" />
-                  {t}
-                </div>
-              ))}
             </motion.div>
           </motion.div>
 
@@ -217,9 +217,9 @@ export default function Hero() {
               variants={cardEntry(0.9)}
               initial="hidden"
               animate="visible"
-              className="absolute top-[180px] left-[130px] z-20"
+              className="absolute top-[210px] left-[200px] z-20"
             >
-              <div className="glass-card rounded-[2.5rem] p-8 animate-float-a flex flex-col items-center gap-4 group shadow-[0_12px_48px_0_rgba(0,206,209,0.25)] border-[#00CED1]/20">
+              <div className="glass-card rounded-[2.5rem] p-8 animate-float-b flex flex-col items-center gap-4 group shadow-[0_12px_48px_0_rgba(0,206,209,0.25)] border-[#00CED1]/20">
                 <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-2xl group-hover:scale-110 transition-transform duration-700">
                   <Image
                     src="/apple-touch-icon.png"
