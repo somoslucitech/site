@@ -70,7 +70,7 @@ export default function Mentoring() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-          {/* Left — info */}
+          {/* Left -- info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -114,7 +114,7 @@ export default function Mentoring() {
             </motion.a>
           </motion.div>
 
-          {/* Right — Calendly block */}
+          {/* Right -- Calendly block */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

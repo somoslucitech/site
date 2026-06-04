@@ -20,21 +20,22 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Somos Luci — Software & Consultoría Premium',
+  title: 'Somos Luci - Software Premium & Consultoría en Venezuela',
   description:
-    'Desarrollamos software a medida con un enfoque ágil y consultoría tecnológica de alto nivel. De la idea al código en semanas, no meses.',
+    'Agencia de desarrollo de software en Valencia, Venezuela. Especialistas en MVPs, aplicaciones web con Next.js y consultoría tecnológica de alto nivel.',
   keywords: [
-    'desarrollo de software',
-    'agencia de software',
+    'desarrollo de software venezuela',
+    'agencia de software valencia',
+    'desarrollo de aplicaciones venezuela',
     'consultoría tecnológica',
-    'programación',
     'Next.js',
     'TypeScript',
-    'MVP',
+    'MVP startups',
+    'programación a medida',
   ],
   openGraph: {
-    title: 'Somos Luci — Software & Consultoría Premium',
-    description: 'De la idea al código en semanas, no meses.',
+    title: 'Somos Luci - Software & Consultoría Premium',
+    description: 'De la idea al código en semanas, desde Venezuela para el mundo.',
     type: 'website',
   },
   icons: {
@@ -71,12 +72,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               priceRange: '$$',
               address: {
                 '@type': 'PostalAddress',
-                addressCountry: 'ES',
+                addressLocality: 'Valencia',
+                addressRegion: 'Carabobo',
+                addressCountry: 'VE',
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: 0,
-                longitude: 0,
+                latitude: 10.1620,
+                longitude: -68.0077,
               },
               openingHoursSpecification: {
                 '@type': 'OpeningHoursSpecification',
@@ -107,7 +110,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 ],
               },
               description:
-                'Agencia de desarrollo de software boutique especializada en MVPs, aplicaciones web modernas y consultoría tecnológica de alto nivel.',
+                'Agencia de desarrollo de software boutique en Valencia, Venezuela, especializada en MVPs, aplicaciones web modernas y consultoría tecnológica de alto nivel.',
             }),
           }}
         />

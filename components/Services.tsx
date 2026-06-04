@@ -49,7 +49,7 @@ export default function Services() {
         {/* Bento grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
 
-          {/* Card A — Desarrollo Web (2/3) */}
+          {/* Card A -- Desarrollo Web (2/3) */}
           <motion.div
             custom={0}
             variants={reveal}
@@ -111,7 +111,7 @@ export default function Services() {
             </div>
           </motion.div>
 
-          {/* Card B — Consultoría (1/3) */}
+          {/* Card B -- Consultoría (1/3) */}
           <motion.div
             custom={1}
             variants={reveal}

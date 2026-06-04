@@ -38,7 +38,7 @@ function DarkModeToggle() {
       }`}
       style={{ width: 52, height: 28 }}
     >
-      {/* Background hint — Sun (visible in dark, hinting "go light") */}
+      {/* Background hint -- Sun (visible in dark, hinting "go light") */}
       <Sun
         size={11}
         weight="fill"
@@ -47,7 +47,7 @@ function DarkModeToggle() {
         }`}
       />
 
-      {/* Background hint — Moon (visible in light, hinting "go dark") */}
+      {/* Background hint -- Moon (visible in light, hinting "go dark") */}
       <Moon
         size={11}
         weight="fill"

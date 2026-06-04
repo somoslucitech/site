@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
       from: `Somos Luci <${process.env.FROM_EMAIL ?? 'onboarding@resend.dev'}>`,
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
-      subject: `[Contacto] ${topicLabel} — ${name}`,
+      subject: `[Contacto] ${topicLabel} - ${name}`,
       html: `
         <div style="font-family:ui-sans-serif,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:32px;background:#ffffff;">
           <div style="background:linear-gradient(135deg,#00CED1,#00B5B8);border-radius:16px;padding:28px 32px;margin-bottom:28px;">
@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
               Nuevo mensaje de contacto
             </h1>
             <p style="color:rgba(255,255,255,0.75);margin:6px 0 0;font-size:13px;">
-              somosluci.com — formulario web
+              somosluci.com - formulario web
             </p>
           </div>
 

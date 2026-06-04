@@ -36,46 +36,46 @@ export default function Hero() {
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden mesh-bg">
       <div className="absolute inset-0 -z-10 opacity-[0.022] dot-grid" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-20 pt-32 lg:pt-36">
-        <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] items-center gap-16 lg:gap-0">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-12 lg:py-20 pt-24 lg:pt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] items-center gap-12 lg:gap-0">
 
           {/* ── Left column ── */}
           <motion.div
             variants={container}
             initial="hidden"
             animate="visible"
-            className="max-w-[580px]"
+            className="max-w-[580px] w-full"
           >
             {/* Badge */}
-            <motion.div variants={item} className="mb-7">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00CED1]/10 border border-[#00CED1]/20 text-[#00CED1] text-xs font-semibold tracking-widest uppercase">
+            <motion.div variants={item} className="mb-6 md:mb-7">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00CED1]/10 border border-[#00CED1]/20 text-[#00CED1] text-[10px] md:text-xs font-semibold tracking-widest uppercase">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00CED1] opacity-75" />
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#00CED1]" />
                 </span>
-                Software & Consultoría Premium
+                Software Premium desde Venezuela
               </span>
             </motion.div>
 
             {/* Headline */}
             <motion.h1
               variants={item}
-              className="text-[52px] md:text-[60px] lg:text-[68px] font-bold tracking-tighter leading-[1.02] text-slate-900 dark:text-white mb-6"
+              className="text-[38px] xs:text-[44px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold tracking-tighter leading-[1.05] md:leading-[1.02] text-slate-900 dark:text-white mb-6"
             >
-              Software que escala 
-              <br />
-              <span className="text-[#00CED1]">en tiempo récord.</span>
+              Desarrollo de software
+              <br className="hidden xs:block" />
+              <span className="text-[#00CED1]"> que escala rápido.</span>
             </motion.h1>
 
             {/* Sub */}
             <motion.p
               variants={item}
-              className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[52ch] mb-7"
+              className="text-[16px] md:text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[50ch] mb-8 md:mb-10"
             >
-              Construimos productos digitales de alto rendimiento y asesoramos a empresas en su roadmap tecnológico. Sin burocracia, solo código excepcional.
+              Construimos aplicaciones web de alto rendimiento desde Valencia para el mundo. Sin burocracia, de la idea al código en semanas.
             </motion.p>
 
-            {/* Trust line — Moved above CTAs to avoid the bottom gradient and ensure visibility */}
+            {/* Trust line */}
             <motion.div
               variants={item}
               className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-10"
@@ -85,7 +85,7 @@ export default function Hero() {
                 'Entrega en sprints',
                 'Soporte post-lanzamiento',
               ].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-[15px] font-medium text-slate-700 dark:text-slate-300">
+                <div key={t} className="flex items-center gap-2 text-[14px] md:text-[15px] font-medium text-slate-700 dark:text-slate-300">
                   <CheckCircle size={18} weight="fill" className="text-[#00CED1] flex-shrink-0" />
                   {t}
                 </div>
@@ -95,13 +95,13 @@ export default function Hero() {
             {/* CTAs */}
             <motion.div
               variants={item}
-              className="flex flex-wrap items-center gap-3"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
             >
               <motion.a
                 href="#contacto"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[12px] bg-[#FACC15] text-slate-900 font-semibold text-sm shadow-[0_6px_24px_0_rgba(250,204,21,0.45)] hover:shadow-[0_8px_32px_0_rgba(250,204,21,0.55)] transition-shadow duration-300"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-[12px] bg-[#FACC15] text-slate-900 font-semibold text-sm shadow-[0_6px_24px_0_rgba(250,204,21,0.45)] hover:shadow-[0_8px_32px_0_rgba(250,204,21,0.55)] transition-shadow duration-300"
               >
                 Iniciar mi proyecto
                 <ArrowRight size={15} weight="bold" />
@@ -110,7 +110,7 @@ export default function Hero() {
                 href="#proceso"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[12px] border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 font-medium text-sm hover:border-slate-300 dark:hover:border-slate-600 hover:bg-white dark:hover:bg-slate-800 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-[12px] border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 font-medium text-sm hover:border-slate-300 dark:hover:border-slate-600 hover:bg-white dark:hover:bg-slate-800 transition-all duration-200"
               >
                 Ver cómo funciona
               </motion.a>
@@ -120,7 +120,7 @@ export default function Hero() {
           {/* ── Right column: floating cards ── */}
           <div className="relative h-[560px] hidden lg:block">
 
-            {/* Card A — terminal (Shifted Up/Right) */}
+            {/* Card A -- terminal (Shifted Up/Right) */}
             <motion.div
               variants={cardEntry(0.7)}
               initial="hidden"
@@ -144,7 +144,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card B — proyectos (Shifted Left) */}
+            {/* Card B -- proyectos (Shifted Left) */}
             <motion.div
               variants={cardEntry(0.85)}
               initial="hidden"
@@ -165,7 +165,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card C — satisfacción (Shifted Down/Right) */}
+            {/* Card C -- satisfacción (Shifted Down/Right) */}
             <motion.div
               variants={cardEntry(1.0)}
               initial="hidden"
@@ -185,7 +185,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card D — primera llamada (Shifted Up/Left) */}
+            {/* Card D -- primera llamada (Shifted Up/Left) */}
             <motion.div
               variants={cardEntry(1.15)}
               initial="hidden"
@@ -212,7 +212,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card E — Central Logo (Enlarged & Centered) */}
+            {/* Card E -- Central Logo (Enlarged & Centered) */}
             <motion.div
               variants={cardEntry(0.9)}
               initial="hidden"
@@ -250,7 +250,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#F8FAFC] dark:from-slate-950 via-[#F8FAFC]/70 dark:via-slate-950/70 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-32 md:h-48 bg-gradient-to-t from-[#F8FAFC] dark:from-slate-950 via-[#F8FAFC]/70 dark:via-slate-950/70 to-transparent pointer-events-none -z-10" />
     </section>
   )
 }
