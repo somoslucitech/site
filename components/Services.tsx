@@ -1,10 +1,12 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   Browser,
   ChartBar,
   ArrowUpRight,
+  ArrowRight,
   CheckCircle,
   Shapes,
   GitBranch,
@@ -67,7 +69,7 @@ export default function Services() {
                     <Browser size={22} className="text-[#00CED1]" weight="duotone" />
                   </div>
                   <a
-                    href="#contacto"
+                    href="/#contacto"
                     className="flex items-center gap-1 text-xs font-semibold text-[#00CED1] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
                     Empezar proyecto
@@ -106,6 +108,17 @@ export default function Services() {
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+                  <Link href="/servicios/desarrollo-de-mvp" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#007C80] dark:text-[#00CED1] group/link">
+                    Desarrollo de MVP
+                    <ArrowRight size={14} weight="bold" className="group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link href="/servicios/desarrollo-de-software-a-medida" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#007C80] dark:text-[#00CED1] group/link">
+                    Software a medida
+                    <ArrowRight size={14} weight="bold" className="group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -148,6 +161,11 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+
+              <Link href="/servicios/cto-as-a-service" className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-[#007C80] dark:text-[#00CED1] group/link">
+                Ver CTO as a Service
+                <ArrowRight size={14} weight="bold" className="group-hover/link:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </motion.div>
         </div>

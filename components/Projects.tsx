@@ -1,8 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowUpRight } from '@phosphor-icons/react'
-import { PROJECTS, type Project } from '@/lib/content'
+import { ArrowRight } from '@phosphor-icons/react'
+import { PROJECTS, domain, type Project } from '@/lib/content'
 
 const reveal = {
   hidden: { opacity: 0, y: 28 },
@@ -13,16 +14,17 @@ const reveal = {
   }),
 }
 
-const domain = (url: string) => url.replace(/^https?:\/\/(www\.)?/, '')
+const MotionLink = motion(Link)
 
-function Screenshot({ p, eager, sizes }: { p: Project; eager: boolean; sizes: string }) {
+
+export function Screenshot({ p, eager, sizes }: { p: Project; eager: boolean; sizes: string }) {
   return (
     <div className="rounded-2xl overflow-hidden border border-slate-200/70 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.6)]">
       <div className="h-8 px-4 flex items-center gap-1.5 border-b border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/80">
         <span className="w-2 h-2 rounded-full bg-red-400/60" />
         <span className="w-2 h-2 rounded-full bg-amber-400/60" />
         <span className="w-2 h-2 rounded-full bg-emerald-400/60" />
-        <span className="ml-3 font-mono text-[10px] text-slate-400 truncate">{domain(p.url)}</span>
+        <span className="ml-3 font-mono text-[10px] text-slate-500 dark:text-slate-400 truncate">{domain(p.url)}</span>
       </div>
       <div className="relative aspect-[1600/830] overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -42,14 +44,14 @@ function Screenshot({ p, eager, sizes }: { p: Project; eager: boolean; sizes: st
   )
 }
 
-function KindBadge({ kind }: { kind: Project['kind'] }) {
+export function KindBadge({ kind }: { kind: Project['kind'] }) {
   const own = kind === 'Producto propio'
   return (
     <span
       className={`inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase ${
         own
-          ? 'bg-[#00CED1]/10 border border-[#00CED1]/20 text-[#007C80] dark:text-[#00CED1]'
-          : 'bg-[#FACC15]/15 border border-[#FACC15]/30 text-amber-700 dark:text-[#FACC15]'
+          ? 'bg-[#00CED1]/10 border border-[#00CED1]/20 text-[#006466] dark:text-[#00CED1]'
+          : 'bg-[#FACC15]/15 border border-[#FACC15]/30 text-amber-800 dark:text-[#FACC15]'
       }`}
     >
       {kind}
@@ -57,7 +59,7 @@ function KindBadge({ kind }: { kind: Project['kind'] }) {
   )
 }
 
-function StackTags({ stack }: { stack: string[] }) {
+export function StackTags({ stack }: { stack: string[] }) {
   return (
     <div className="flex flex-wrap gap-2">
       {stack.map((tag) => (
@@ -72,8 +74,19 @@ function StackTags({ stack }: { stack: string[] }) {
   )
 }
 
-export default function Projects() {
+export function ProjectStatus({ status }: { status: string }) {
+  const live = status.startsWith('En producción')
+  return (
+    <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-500 dark:text-slate-400">
+      <span className={`w-1.5 h-1.5 rounded-full ${live ? 'bg-emerald-500' : 'bg-amber-500'}`} />
+      {status}
+    </span>
+  )
+}
+
+export default function Projects({ asPage = false }: { asPage?: boolean }) {
   const [featured, ...rest] = PROJECTS
+  const Heading = asPage ? 'h1' : 'h2'
 
   return (
     <section id="proyectos" className="py-24 bg-white dark:bg-slate-950 scroll-mt-16">
@@ -91,22 +104,20 @@ export default function Projects() {
             <p className="text-xs font-semibold tracking-widest uppercase text-[#00CED1] mb-3">
               Proyectos
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white max-w-xl leading-[1.08]">
-              En producción.
+            <Heading className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white max-w-xl leading-[1.08]">
+              Lo que hemos construido.
               <br />
-              <span className="text-slate-500 dark:text-slate-500">Con usuarios reales.</span>
-            </h2>
+              <span className="text-slate-500 dark:text-slate-500">Y está en línea.</span>
+            </Heading>
           </div>
           <p className="text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[40ch]">
-            Productos propios y de clientes que construimos de punta a punta y hoy están en línea.
+            Productos propios y de clientes que construimos de punta a punta. Entra a cada uno para ver el reto, la solución y el stack.
           </p>
         </motion.div>
 
         {/* Featured */}
-        <motion.a
-          href={featured.url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <MotionLink
+          href={`/proyectos/${featured.slug}`}
           custom={0}
           variants={reveal}
           initial="hidden"
@@ -123,8 +134,11 @@ export default function Projects() {
 
             <div className="relative">
               <div className="flex items-center justify-between mb-5">
-                <KindBadge kind={featured.kind} />
-                <ArrowUpRight
+                <div className="flex flex-wrap items-center gap-3">
+                  <KindBadge kind={featured.kind} />
+                  <ProjectStatus status={featured.status} />
+                </div>
+                <ArrowRight
                   size={18}
                   weight="bold"
                   className="text-slate-300 dark:text-slate-600 group-hover:text-[#00CED1] transition-colors duration-300"
@@ -140,21 +154,19 @@ export default function Projects() {
                 <StackTags stack={featured.stack} />
               </div>
               <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#007C80] dark:text-[#00CED1]">
-                {domain(featured.url)}
-                <ArrowUpRight size={14} weight="bold" />
+                Ver caso de estudio
+                <ArrowRight size={14} weight="bold" className="group-hover:translate-x-1 transition-transform" />
               </span>
             </div>
           </div>
-        </motion.a>
+        </MotionLink>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {rest.map((p, i) => (
-            <motion.a
+            <MotionLink
               key={p.slug}
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/proyectos/${p.slug}`}
               custom={(i % 3) + 1}
               variants={reveal}
               initial="hidden"
@@ -167,8 +179,11 @@ export default function Projects() {
 
                 <div className="pt-6 px-1 flex flex-col flex-1">
                   <div className="flex items-center justify-between mb-4">
-                    <KindBadge kind={p.kind} />
-                    <ArrowUpRight
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                      <KindBadge kind={p.kind} />
+                      <ProjectStatus status={p.status} />
+                    </div>
+                    <ArrowRight
                       size={16}
                       weight="bold"
                       className="text-slate-300 dark:text-slate-600 group-hover:text-[#00CED1] transition-colors duration-300"
@@ -183,13 +198,13 @@ export default function Projects() {
                   <div className="mt-auto flex flex-col gap-5">
                     <StackTags stack={p.stack} />
                     <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#007C80] dark:text-[#00CED1]">
-                      {domain(p.url)}
-                      <ArrowUpRight size={13} weight="bold" />
+                      Ver caso de estudio
+                      <ArrowRight size={13} weight="bold" className="group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>
                 </div>
               </div>
-            </motion.a>
+            </MotionLink>
           ))}
         </div>
       </div>

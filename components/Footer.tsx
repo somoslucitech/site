@@ -1,13 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { CONTACT_EMAIL, SOCIAL_LINKS } from '@/lib/content'
+import { CONTACT_EMAIL, SERVICES, SOCIAL_LINKS } from '@/lib/content'
 
 const NAV_LINKS = [
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Preguntas', href: '#preguntas' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Proyectos', href: '/proyectos' },
+  { label: 'Quiénes somos', href: '/nosotros' },
+  { label: 'Proceso', href: '/#proceso' },
+  { label: 'Preguntas', href: '/#preguntas' },
+  { label: 'Contacto', href: '/#contacto' },
 ]
+
+const SERVICE_LINKS = SERVICES.map((s) => ({ label: s.title, href: `/servicios/${s.slug}` }))
 
 export default function Footer() {
   return (
@@ -15,7 +18,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Main row */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-12 md:gap-24">
+        <div className="py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1fr_auto_auto_auto] gap-12 md:gap-16 lg:gap-24">
 
           {/* Brand */}
           <div className="max-w-xs">
@@ -45,6 +48,25 @@ export default function Footer() {
             </p>
             <ul className="space-y-3">
               {NAV_LINKS.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
+                    className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#00CED1] dark:hover:text-white transition-colors duration-200"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-slate-500 dark:text-slate-500 mb-6">
+              Servicios
+            </p>
+            <ul className="space-y-3">
+              {SERVICE_LINKS.map((l) => (
                 <li key={l.label}>
                   <Link
                     href={l.href}

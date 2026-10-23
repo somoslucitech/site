@@ -1,6 +1,6 @@
 # Somos Luci
 
-> Somos Luci es una agencia de desarrollo de software con base en Valencia, Carabobo, Venezuela. Construye MVPs, aplicaciones web y sistemas a medida para startups y empresas de Venezuela y del exterior, y ofrece consultoría técnica (CTO as a Service). Tiene 7 productos en producción, propios y de clientes.
+> Somos Luci es una agencia de desarrollo de software con base en Valencia, Carabobo, Venezuela. Construye MVPs, aplicaciones web y sistemas a medida para startups y empresas de Venezuela y del exterior, y ofrece consultoría técnica (CTO as a Service). Tiene 7 productos en línea, propios y de clientes.
 
 ## Servicios
 
@@ -18,15 +18,15 @@
 
 Next.js, React, TypeScript, Node.js, Python (FastAPI), PostgreSQL, Redis, Cloudflare Workers, AWS, DigitalOcean, Docker, Flutter, React Native.
 
-## Proyectos en producción
+## Proyectos (casos de estudio)
 
-- [Perchero](https://perchero.app) (producto propio): tiendas en línea para importadores de ropa con pedidos por WhatsApp y control de margen.
-- [PuntoFix](https://puntofix.app) (producto propio): sistema para talleres de reparación con órdenes, repuestos, caja y seguimiento para el cliente.
-- [TravelsDesk](https://travelsdesk.app) (producto propio): sistema para agencias de viajes con órdenes, cobranza, emisión, facturación y comisiones.
-- [cover2video](https://cover2video.com) (cliente): convierte la portada de un álbum y un fragmento de audio en un video de vinilo girando, procesado en el navegador.
-- [Bonchona 107.1 FM](https://bonchonaradio.com) (cliente): sitio de radio con transmisión en vivo y chat en tiempo real.
-- [Anhella Kids](https://www.anhellakids.com) (cliente): boutique infantil con inventario por talla y pedidos por WhatsApp.
-- [Cesar Activo](https://cesaractivo.com) (cliente): plataforma de venta del programa Detox5 con cobros por PayPal.
+- [Perchero](https://somosluci.com/proyectos/perchero) (producto propio, listo para lanzamiento): tiendas en línea para importadores de ropa con pedidos por WhatsApp y control de margen. Sitio: https://perchero.app
+- [PuntoFix](https://somosluci.com/proyectos/puntofix) (producto propio, en etapa de lanzamiento): sistema para talleres de reparación con órdenes, repuestos, caja y seguimiento para el cliente. Sitio: https://puntofix.app
+- [TravelsDesk](https://somosluci.com/proyectos/travelsdesk) (producto propio, en producción): sistema para agencias de viajes con órdenes, cobranza, emisión, facturación y comisiones. Sitio: https://travelsdesk.app
+- [cover2video](https://somosluci.com/proyectos/cover2video) (cliente, en producción): convierte la portada de un álbum y un fragmento de audio en un video de vinilo girando, procesado en el navegador. Sitio: https://cover2video.com
+- [Bonchona 107.1 FM](https://somosluci.com/proyectos/bonchona) (cliente, en producción): sitio de radio con transmisión en vivo y chat en tiempo real. Sitio: https://bonchonaradio.com
+- [Anhella Kids](https://somosluci.com/proyectos/anhellakids) (cliente, en producción): boutique infantil con inventario por talla y pedidos por WhatsApp. Sitio: https://www.anhellakids.com
+- [Cesar Activo](https://somosluci.com/proyectos/cesaractivo) (cliente, en producción): plataforma de venta del programa Detox5 con cobros por PayPal. Sitio: https://cesaractivo.com
 
 ## Contacto
 
@@ -38,5 +38,9 @@ Next.js, React, TypeScript, Node.js, Python (FastAPI), PostgreSQL, Redis, Cloudf
 ## Páginas
 
 - [Inicio](https://somosluci.com/): servicios, proyectos, proceso, preguntas frecuentes y contacto.
-- [Proyectos](https://somosluci.com/#proyectos)
+- [Desarrollo de MVP](https://somosluci.com/servicios/desarrollo-de-mvp)
+- [Desarrollo de software y aplicaciones web a medida](https://somosluci.com/servicios/desarrollo-de-software-a-medida)
+- [CTO as a Service y consultoría técnica](https://somosluci.com/servicios/cto-as-a-service)
+- [Proyectos y casos de estudio](https://somosluci.com/proyectos)
+- [Quiénes somos](https://somosluci.com/nosotros)
 - [Preguntas frecuentes](https://somosluci.com/#preguntas)

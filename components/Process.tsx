@@ -9,57 +9,33 @@ import {
   RocketLaunch,
   ArrowRight,
 } from '@phosphor-icons/react'
+import { PROCESS_STEPS as STEPS } from '@/lib/content'
 
-const PROCESS_STEPS = [
+// Copy lives in lib/content.ts; icons and window tips are visual and stay here
+const STEP_VISUALS = [
   {
-    id: 0,
-    title: 'Primer contacto',
-    desc: 'Nos escribes por WhatsApp o correo y nos cuentas tu idea. Te hacemos las preguntas clave para entender tu visión, identificar cuellos de botella técnicos y definir el MVP que tu mercado necesita.',
     icon: ChatCircleText,
     alt: 'Conversación de descubrimiento',
-    tip: {
-      text: "Objetivo: Alinear arquitectura con KPIs de negocio.",
-      tech: "Canal: WhatsApp / Correo",
-      pos: "top-4 left-4"
-    }
+    tip: { text: "Objetivo: Alinear arquitectura con KPIs de negocio.", tech: "Canal: WhatsApp / Correo", pos: "top-4 left-4" },
   },
   {
-    id: 1,
-    title: 'Propuesta & Stack',
-    desc: 'Diseñamos una arquitectura técnica escalable con las tecnologías más modernas (Next.js, Node, AWS). Recibes un presupuesto honesto, tiempos realistas y una cláusula de confidencialidad total en menos de 48h.',
     icon: GearSix,
     alt: 'Documento de propuesta técnica',
-    tip: {
-      text: "Definimos un stack que escale de 0 a 1M de usuarios.",
-      tech: "Tools: Notion / PDF",
-      pos: "bottom-12 right-4"
-    }
+    tip: { text: "Definimos un stack que escale de 0 a 1M de usuarios.", tech: "Tools: Notion / PDF", pos: "bottom-12 right-4" },
   },
   {
-    id: 2,
-    title: 'Sprints de Código',
-    desc: 'Transformamos ideas en software de alto rendimiento. Trabajamos con metodología Agile, entregando módulos funcionales cada 7 días para que puedas probar, validar y pivotar en tiempo real.',
     icon: Code,
     alt: 'Código fuente en desarrollo',
-    tip: {
-      text: "Código limpio, testeado y listo para producción.",
-      tech: "Stack: TypeScript / PostgreSQL",
-      pos: "top-12 right-6"
-    }
+    tip: { text: "Código limpio, testeado y listo para producción.", tech: "Stack: TypeScript / PostgreSQL", pos: "top-12 right-6" },
   },
   {
-    id: 3,
-    title: 'Lanzamiento',
-    desc: 'Hacemos el deploy de tu producto en infraestructura cloud de última generación. Pero no nos vamos: incluimos soporte post-lanzamiento y optimización continua para asegurar un crecimiento sin fricción.',
     icon: RocketLaunch,
     alt: 'Producto en producción',
-    tip: {
-      text: "Deploy automatizado y monitorización 24/7.",
-      tech: "Infra: Vercel / AWS / Docker",
-      pos: "bottom-8 left-8"
-    }
+    tip: { text: "Deploy automatizado y monitorización 24/7.", tech: "Infra: Vercel / AWS / Docker", pos: "bottom-8 left-8" },
   },
 ]
+
+const PROCESS_STEPS = STEPS.map((step, id) => ({ id, ...step, ...STEP_VISUALS[id] }))
 
 /* ── Visual Skeletons with Standardized Window Frame ────────────────── */
 

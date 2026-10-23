@@ -8,10 +8,10 @@ import { List, X, Sun, Moon } from '@phosphor-icons/react'
 import { useTheme } from '@/components/ThemeProvider'
 
 const NAV_LINKS = [
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Proceso', href: '#proceso' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Proyectos', href: '/#proyectos' },
+  { label: 'Servicios', href: '/#servicios' },
+  { label: 'Proceso', href: '/#proceso' },
+  { label: 'Contacto', href: '/#contacto' },
 ]
 
 function DarkModeToggle() {
@@ -147,7 +147,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <DarkModeToggle />
             <motion.a
-              href="#contacto"
+              href="/#contacto"
               whileHover={{ scale: 1.02, y: -1 }}
               whileTap={{ scale: 0.97 }}
               className="px-4 py-2 rounded-[10px] bg-[#FACC15] text-slate-900 text-sm font-semibold shadow-[0_4px_14px_0_rgba(250,204,21,0.4)] hover:shadow-[0_6px_20px_0_rgba(250,204,21,0.55)] transition-shadow duration-300"
@@ -192,7 +192,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="#contacto"
+                href="/#contacto"
                 className="mt-4 px-4 py-3 rounded-[10px] bg-[#FACC15] text-slate-900 text-sm font-semibold text-center"
                 onClick={() => setMenuOpen(false)}
               >

@@ -3,7 +3,10 @@ import { Outfit, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import CookieBanner from '@/components/CookieBanner'
-import { CONTACT_EMAIL, FAQS, PROJECTS, SITE_URL, SOCIAL_LINKS, WHATSAPP_NUMBER } from '@/lib/content'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import WhatsAppButton from '@/components/WhatsAppButton'
+import { CONTACT_EMAIL, ORG_ID, SITE_URL, SOCIAL_LINKS, WHATSAPP_NUMBER } from '@/lib/content'
 import './globals.css'
 
 const outfit = Outfit({
@@ -22,11 +25,11 @@ const jetbrains = JetBrains_Mono({
 
 const TITLE = 'Somos Luci - Desarrollo de Software & Consultoría en Venezuela'
 const DESCRIPTION =
-  'Agencia de desarrollo de software en Valencia, Venezuela. Construimos MVPs, aplicaciones web y sistemas a medida con Next.js, con 7 productos en producción.'
+  'Agencia de desarrollo de software en Valencia, Venezuela. Construimos MVPs, aplicaciones web y sistemas a medida con Next.js, con 7 productos en línea.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: TITLE,
+  title: { default: TITLE, template: '%s | Somos Luci' },
   description: DESCRIPTION,
   alternates: { canonical: '/' },
   keywords: [
@@ -61,8 +64,6 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
 }
-
-const ORG_ID = `${SITE_URL}/#organization`
 
 const JSON_LD = {
   '@context': 'https://schema.org',
@@ -130,33 +131,6 @@ const JSON_LD = {
       inLanguage: 'es',
       publisher: { '@id': ORG_ID },
     },
-    {
-      '@type': 'ItemList',
-      '@id': `${SITE_URL}/#proyectos`,
-      name: 'Proyectos de Somos Luci en producción',
-      itemListElement: PROJECTS.map((p, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        item: {
-          '@type': 'WebApplication',
-          name: p.name,
-          url: p.url,
-          description: p.desc,
-          applicationCategory: 'BusinessApplication',
-          image: `${SITE_URL}/proyectos/${p.slug}.webp`,
-          creator: { '@id': ORG_ID },
-        },
-      })),
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${SITE_URL}/#preguntas`,
-      mainEntity: FAQS.map(({ q, a }) => ({
-        '@type': 'Question',
-        name: q,
-        acceptedAnswer: { '@type': 'Answer', text: a },
-      })),
-    },
   ],
 }
 
@@ -179,7 +153,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-[#F8FAFC] dark:bg-slate-950 text-slate-900 dark:text-white font-sans">
         <ThemeProvider>
+          <Navbar />
           {children}
+          <Footer />
+          <WhatsAppButton />
         </ThemeProvider>
         <CookieBanner />
         <GoogleAnalytics gaId="G-2KXC6JL45P" />
