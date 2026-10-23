@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: `Somos Luci <${process.env.FROM_EMAIL ?? 'onboarding@resend.dev'}>`,
-      to: process.env.CONTACT_EMAIL!,
+      to: 'developers@somosluci.com',
       replyTo: email,
       subject: `[Contacto] ${topicLabel} - ${name}`,
       html: `

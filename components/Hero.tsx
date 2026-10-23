@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle, Code, RocketLaunch, Sparkle } from '@phosphor-icons/react'
+import { ArrowRight, ChatCircleText, CheckCircle, RocketLaunch, Sparkle } from '@phosphor-icons/react'
 
 const container = {
   hidden: { opacity: 0 },
@@ -81,7 +81,7 @@ export default function Hero() {
               className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-10"
             >
               {[
-                'Primera llamada gratis',
+                'Propuesta en 48h',
                 'Entrega en sprints',
                 'Soporte post-lanzamiento',
               ].map((t) => (
@@ -107,12 +107,12 @@ export default function Hero() {
                 <ArrowRight size={15} weight="bold" />
               </motion.a>
               <motion.a
-                href="#proceso"
+                href="#proyectos"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-[12px] border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 font-medium text-sm hover:border-slate-300 dark:hover:border-slate-600 hover:bg-white dark:hover:bg-slate-800 transition-all duration-200"
               >
-                Ver cómo funciona
+                Ver proyectos
               </motion.a>
             </motion.div>
           </motion.div>
@@ -185,7 +185,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Card D -- primera llamada (Shifted Up/Left) */}
+            {/* Card D -- primer contacto (Shifted Up/Left) */}
             <motion.div
               variants={cardEntry(1.15)}
               initial="hidden"
@@ -195,11 +195,11 @@ export default function Hero() {
               <div className="glass-card rounded-2xl p-3.5 animate-float-d">
                 <div className="flex items-center gap-2.5">
                   <div className="w-7 h-7 rounded-lg bg-[#00CED1]/10 flex items-center justify-center flex-shrink-0">
-                    <Code size={14} className="text-[#00CED1]" weight="bold" />
+                    <ChatCircleText size={14} className="text-[#00CED1]" weight="bold" />
                   </div>
                   <div>
-                    <p className="text-[12px] font-semibold text-slate-800 dark:text-slate-100 leading-tight">Llamada inicial</p>
-                    <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">30 min · Sin costo</p>
+                    <p className="text-[12px] font-semibold text-slate-800 dark:text-slate-100 leading-tight">Cuéntanos tu idea</p>
+                    <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">WhatsApp · Correo</p>
                   </div>
                 </div>
                 <div className="mt-3 flex items-center gap-1.5">
@@ -207,7 +207,7 @@ export default function Hero() {
                     <span className="animate-ping_slow absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
                   </span>
-                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Slots disponibles</span>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Respondemos hoy</span>
                 </div>
               </div>
             </motion.div>

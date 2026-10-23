@@ -6,7 +6,10 @@ const SOCIAL_LINKS = [
   { label: 'Instagram', href: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? 'https://www.instagram.com/somos.luci/' },
 ]
 
+const CONTACT_EMAIL = 'developers@somosluci.com'
+
 const NAV_LINKS = [
+  { label: 'Proyectos', href: '#proyectos' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Contacto', href: '#contacto' },
 ]
@@ -87,8 +90,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Somos Luci. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-[11px] font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-            <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'hola@somosluci.com'}`} className="hover:text-[#00CED1] dark:hover:text-white transition-colors">
-              {process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'hola@somosluci.com'}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[#00CED1] dark:hover:text-white transition-colors">
+              {CONTACT_EMAIL}
             </a>
             <span className="hidden sm:inline opacity-30">|</span>
             <span className="opacity-60">Built with code and coffee</span>

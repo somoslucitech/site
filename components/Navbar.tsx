@@ -8,6 +8,7 @@ import { List, X, Sun, Moon } from '@phosphor-icons/react'
 import { useTheme } from '@/components/ThemeProvider'
 
 const NAV_LINKS = [
+  { label: 'Proyectos', href: '#proyectos' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Proceso', href: '#proceso' },
   { label: 'Contacto', href: '#contacto' },
@@ -151,7 +152,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.97 }}
               className="px-4 py-2 rounded-[10px] bg-[#FACC15] text-slate-900 text-sm font-semibold shadow-[0_4px_14px_0_rgba(250,204,21,0.4)] hover:shadow-[0_6px_20px_0_rgba(250,204,21,0.55)] transition-shadow duration-300"
             >
-              Agendar llamada
+              Escríbenos
             </motion.a>
           </div>
 
@@ -195,7 +196,7 @@ export default function Navbar() {
                 className="mt-4 px-4 py-3 rounded-[10px] bg-[#FACC15] text-slate-900 text-sm font-semibold text-center"
                 onClick={() => setMenuOpen(false)}
               >
-                Agendar llamada
+                Escríbenos
               </a>
             </div>
           </motion.div>
