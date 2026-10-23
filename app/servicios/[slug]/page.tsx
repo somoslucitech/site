@@ -8,8 +8,6 @@ import PageCta from '@/components/PageCta'
 import { KindBadge, Screenshot } from '@/components/Projects'
 import { ORG_ID, PROCESS_STEPS, SERVICES, SITE_URL, getProject, getService, whatsappLink, type Project } from '@/lib/content'
 
-export const dynamicParams = false
-
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }))
 }
