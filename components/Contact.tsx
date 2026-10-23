@@ -16,9 +16,8 @@ import {
   Handshake,
 } from '@phosphor-icons/react'
 import { useTheme } from '@/components/ThemeProvider'
+import { CONTACT_EMAIL, WHATSAPP_NUMBER } from '@/lib/content'
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '+1234567890'
-const CONTACT_EMAIL = 'developers@somosluci.com'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
@@ -65,7 +64,7 @@ function EmailForm({ theme }: { theme: string }) {
         </div>
         <div>
           <p className="text-sm font-bold text-slate-900 dark:text-white">Enviar un mensaje</p>
-          <p className="text-[11px] text-slate-400 dark:text-slate-500">Te respondemos en menos de 2 horas hábiles</p>
+          <p className="text-[11px] text-slate-500 dark:text-slate-500">Te respondemos en menos de 2 horas hábiles</p>
         </div>
       </div>
 
@@ -109,13 +108,15 @@ function EmailForm({ theme }: { theme: string }) {
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                <label htmlFor="contact-name" className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <User size={12} className="text-slate-400" />
                   Nombre completo
                 </label>
                 <input
+                  id="contact-name"
                   type="text"
                   required
+                  autoComplete="name"
                   value={form.name}
                   onChange={set('name')}
                   placeholder="Carlos Rodríguez"
@@ -123,13 +124,15 @@ function EmailForm({ theme }: { theme: string }) {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                <label htmlFor="contact-email" className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <Envelope size={12} className="text-slate-400" />
                   Correo electrónico
                 </label>
                 <input
+                  id="contact-email"
                   type="email"
                   required
+                  autoComplete="email"
                   value={form.email}
                   onChange={set('email')}
                   placeholder="carlos@ejemplo.com"
@@ -139,9 +142,10 @@ function EmailForm({ theme }: { theme: string }) {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Tipo de proyecto</label>
+              <label htmlFor="contact-topic" className="text-xs font-semibold text-slate-700 dark:text-slate-300">Tipo de proyecto</label>
               <div className="relative">
                 <select
+                  id="contact-topic"
                   required
                   value={form.topic}
                   onChange={set('topic')}
@@ -158,11 +162,12 @@ function EmailForm({ theme }: { theme: string }) {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+              <label htmlFor="contact-message" className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <ChatText size={12} className="text-slate-400" />
                 Cuéntanos tu idea
               </label>
               <textarea
+                id="contact-message"
                 required
                 value={form.message}
                 onChange={set('message')}
@@ -247,7 +252,7 @@ export default function Contact() {
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white leading-tight mb-6">
                   Hablemos de tu proyecto.
                   <br />
-                  <span className="text-slate-400 dark:text-slate-500">Por WhatsApp o correo.</span>
+                  <span className="text-slate-500 dark:text-slate-500">Por WhatsApp o correo.</span>
                 </h2>
                 <p className="text-lg text-slate-500 dark:text-slate-400 max-w-[45ch] leading-relaxed">
                   Cuéntanos tu visión. Evaluamos juntos la viabilidad técnica y trazamos el roadmap para construir tu producto en tiempo récord.

@@ -320,7 +320,7 @@ export default function Process() {
         
         <div className="mb-20">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white leading-tight">
-            Un proceso <span className="text-slate-400 dark:text-slate-500">sin fricción.</span>
+            Un proceso <span className="text-slate-500 dark:text-slate-500">sin fricción.</span>
           </h2>
         </div>
 
@@ -435,7 +435,7 @@ export default function Process() {
                 <step.icon size={22} weight="duotone" className="text-[#00CED1]" />
               </div>
               <div className="space-y-2">
-                <span className="text-[10px] font-mono font-bold text-[#00CED1] uppercase tracking-[0.2em]">Etapa 0{i+1}</span>
+                <span className="text-[10px] font-mono font-bold text-[#007C80] dark:text-[#00CED1] uppercase tracking-[0.2em]">Etapa 0{i+1}</span>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white">{step.title}</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{step.desc}</p>
               </div>

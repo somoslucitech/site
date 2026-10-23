@@ -1,16 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-const SOCIAL_LINKS = [
-  { label: 'LinkedIn', href: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? 'https://www.linkedin.com/company/somos-luci/' },
-  { label: 'Instagram', href: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? 'https://www.instagram.com/somos.luci/' },
-]
-
-const CONTACT_EMAIL = 'developers@somosluci.com'
+import { CONTACT_EMAIL, SOCIAL_LINKS } from '@/lib/content'
 
 const NAV_LINKS = [
   { label: 'Proyectos', href: '#proyectos' },
   { label: 'Servicios', href: '#servicios' },
+  { label: 'Preguntas', href: '#preguntas' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
@@ -45,7 +40,7 @@ export default function Footer() {
 
           {/* Nav */}
           <div>
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-slate-400 dark:text-slate-500 mb-6">
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-slate-500 dark:text-slate-500 mb-6">
               Navegación
             </p>
             <ul className="space-y-3">
@@ -64,7 +59,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-slate-400 dark:text-slate-500 mb-6">
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-slate-500 dark:text-slate-500 mb-6">
               Redes
             </p>
             <ul className="space-y-3">
@@ -86,15 +81,15 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-slate-200 dark:border-slate-800/80 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[11px] font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+          <p className="text-[11px] font-medium text-slate-500 dark:text-slate-500 uppercase tracking-widest">
             &copy; {new Date().getFullYear()} Somos Luci. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-[11px] font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+          <div className="flex items-center gap-6 text-[11px] font-medium text-slate-500 dark:text-slate-500 uppercase tracking-widest">
             <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[#00CED1] dark:hover:text-white transition-colors">
               {CONTACT_EMAIL}
             </a>
             <span className="hidden sm:inline opacity-30">|</span>
-            <span className="opacity-60">Built with code and coffee</span>
+            <span>Built with code and coffee</span>
           </div>
         </div>
       </div>

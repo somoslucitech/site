@@ -24,7 +24,7 @@ export default function TechMarquee() {
         {TECHS.map((tech, i) => (
           <span
             key={i}
-            className="inline-flex items-center mx-6 text-sm font-medium text-slate-400 dark:text-slate-500 tracking-wide"
+            className="inline-flex items-center mx-6 text-sm font-medium text-slate-500 dark:text-slate-500 tracking-wide"
           >
             <Star 
               size={14} 

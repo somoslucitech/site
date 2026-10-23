@@ -1,0 +1,42 @@
+# Somos Luci
+
+> Somos Luci es una agencia de desarrollo de software con base en Valencia, Carabobo, Venezuela. Construye MVPs, aplicaciones web y sistemas a medida para startups y empresas de Venezuela y del exterior, y ofrece consultoría técnica (CTO as a Service). Tiene 7 productos en producción, propios y de clientes.
+
+## Servicios
+
+- Desarrollo de MVPs y aplicaciones web: arquitectura en Next.js y TypeScript, diseño UI/UX orientado a conversión, infraestructura escalable y entregas funcionales cada 7 días.
+- CTO as a Service y consultoría: auditoría de código y seguridad, estrategia técnica para startups, selección de stack y optimización.
+
+## Cómo trabajamos
+
+1. Primer contacto por WhatsApp o correo: nos cuentas tu idea.
+2. Propuesta en menos de 48 horas con alcance, stack, tiempos y presupuesto.
+3. Sprints de 7 días con avances funcionales que puedes probar.
+4. Lanzamiento en la nube y soporte post-lanzamiento.
+
+## Stack principal
+
+Next.js, React, TypeScript, Node.js, Python (FastAPI), PostgreSQL, Redis, Cloudflare Workers, AWS, DigitalOcean, Docker, Flutter, React Native.
+
+## Proyectos en producción
+
+- [Perchero](https://perchero.app) (producto propio): tiendas en línea para importadores de ropa con pedidos por WhatsApp y control de margen.
+- [PuntoFix](https://puntofix.app) (producto propio): sistema para talleres de reparación con órdenes, repuestos, caja y seguimiento para el cliente.
+- [TravelsDesk](https://travelsdesk.app) (producto propio): sistema para agencias de viajes con órdenes, cobranza, emisión, facturación y comisiones.
+- [cover2video](https://cover2video.com) (cliente): convierte la portada de un álbum y un fragmento de audio en un video de vinilo girando, procesado en el navegador.
+- [Bonchona 107.1 FM](https://bonchonaradio.com) (cliente): sitio de radio con transmisión en vivo y chat en tiempo real.
+- [Anhella Kids](https://www.anhellakids.com) (cliente): boutique infantil con inventario por talla y pedidos por WhatsApp.
+- [Cesar Activo](https://cesaractivo.com) (cliente): plataforma de venta del programa Detox5 con cobros por PayPal.
+
+## Contacto
+
+- Correo: developers@somosluci.com
+- Sitio: https://somosluci.com
+- LinkedIn: https://www.linkedin.com/company/somos-luci/
+- Instagram: https://www.instagram.com/somos.luci/
+
+## Páginas
+
+- [Inicio](https://somosluci.com/): servicios, proyectos, proceso, preguntas frecuentes y contacto.
+- [Proyectos](https://somosluci.com/#proyectos)
+- [Preguntas frecuentes](https://somosluci.com/#preguntas)

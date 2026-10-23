@@ -199,7 +199,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-[12px] font-semibold text-slate-800 dark:text-slate-100 leading-tight">Cuéntanos tu idea</p>
-                    <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">WhatsApp · Correo</p>
+                    <p className="text-[10px] text-slate-500 dark:text-slate-500 mt-0.5">WhatsApp · Correo</p>
                   </div>
                 </div>
                 <div className="mt-3 flex items-center gap-1.5">

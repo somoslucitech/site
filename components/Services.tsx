@@ -42,7 +42,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white max-w-xl leading-[1.08]">
             Ingeniería de software.
             <br />
-            <span className="text-slate-400 dark:text-slate-500">Con rigor técnico.</span>
+            <span className="text-slate-500 dark:text-slate-500">Con rigor técnico.</span>
           </h2>
         </motion.div>
 

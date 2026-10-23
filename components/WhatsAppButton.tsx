@@ -26,6 +26,7 @@ export default function WhatsAppButton() {
               <p className="text-xs font-semibold text-slate-900 dark:text-white">Chateá con nosotros</p>
               <button
                 onClick={() => setShowTooltip(false)}
+                aria-label="Cerrar"
                 className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 flex-shrink-0"
               >
                 <X size={11} weight="bold" />
