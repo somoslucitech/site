@@ -129,7 +129,7 @@ export default function Projects({ asPage = false }: { asPage?: boolean }) {
             <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#00CED1]/5 group-hover:bg-[#00CED1]/10 transition-all duration-500 blur-2xl" />
 
             <div className="relative">
-              <Screenshot p={featured} eager sizes="(min-width: 1024px) 680px, 100vw" />
+              <Screenshot p={featured} eager={asPage} sizes="(min-width: 1024px) 680px, 100vw" />
             </div>
 
             <div className="relative">

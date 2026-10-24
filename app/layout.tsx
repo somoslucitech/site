@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Outfit, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/ThemeProvider'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import ConsentAnalytics from '@/components/ConsentAnalytics'
 import CookieBanner from '@/components/CookieBanner'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -159,7 +159,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <WhatsAppButton />
         </ThemeProvider>
         <CookieBanner />
-        <GoogleAnalytics gaId="G-2KXC6JL45P" />
+        <ConsentAnalytics gaId="G-2KXC6JL45P" />
       </body>
     </html>
   )

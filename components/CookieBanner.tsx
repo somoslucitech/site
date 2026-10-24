@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Cookie, X } from '@phosphor-icons/react'
+import { CONSENT_EVENT } from '@/components/ConsentAnalytics'
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
@@ -19,8 +20,8 @@ export default function CookieBanner() {
   const handleAccept = () => {
     localStorage.setItem('cookie-consent', 'accepted')
     setShowBanner(false)
-    // Recargar para activar GA4 si se desea una implementación estricta
-    window.location.reload()
+    // Carga GA4 al momento, sin recargar la página
+    window.dispatchEvent(new Event(CONSENT_EVENT))
   }
 
   const handleDecline = () => {

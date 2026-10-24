@@ -57,23 +57,21 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
-            <motion.h1
-              variants={item}
+            {/* Headline: rendered visible (no entrance animation) so it paints before JS loads and counts for LCP */}
+            <h1
               className="text-[38px] xs:text-[44px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold tracking-tighter leading-[1.05] md:leading-[1.02] text-slate-900 dark:text-white mb-6"
             >
               Desarrollo de software
               <br className="hidden xs:block" />
               <span className="text-[#00CED1]"> que escala rápido.</span>
-            </motion.h1>
+            </h1>
 
             {/* Sub */}
-            <motion.p
-              variants={item}
+            <p
               className="text-[16px] md:text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[50ch] mb-8 md:mb-10"
             >
               Construimos aplicaciones web de alto rendimiento desde Valencia para el mundo. Sin burocracia, de la idea al código en semanas.
-            </motion.p>
+            </p>
 
             {/* Trust line */}
             <motion.div
