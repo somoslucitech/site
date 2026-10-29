@@ -7,6 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE_URL, lastModified, changeFrequency: 'monthly', priority: 1 },
     { url: `${SITE_URL}/proyectos`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/nosotros`, lastModified, changeFrequency: 'yearly', priority: 0.6 },
+    { url: `${SITE_URL}/mensajeria/privacidad`, lastModified, changeFrequency: 'yearly', priority: 0.2 },
+    { url: `${SITE_URL}/mensajeria/eliminar-datos`, lastModified, changeFrequency: 'yearly', priority: 0.1 },
     ...SERVICES.map((s) => ({
       url: `${SITE_URL}/servicios/${s.slug}`,
       lastModified,
