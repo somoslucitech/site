@@ -31,7 +31,7 @@ export default function MessagingPrivacyPage() {
 
       <h2>1. Quién es el responsable</h2>
       <p>
-        {EMPRESA.razonSocial}, RIF {EMPRESA.rif}, {EMPRESA.registro}, con domicilio en {EMPRESA.domicilio}.
+        {EMPRESA.razonSocial}, RIF {EMPRESA.rif}, {EMPRESA.registro}.
       </p>
       <p>
         Contacto para privacidad: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> · WhatsApp{' '}

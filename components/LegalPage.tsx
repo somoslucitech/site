@@ -7,8 +7,6 @@ import { ORG_ID, SITE_URL } from '@/lib/content'
 export const EMPRESA = {
   razonSocial: 'Somos Luci, C.A.',
   rif: 'J-50890546-6',
-  domicilio:
-    'Calle Principal, Edificio Grupo F, piso 3, apartamento 241, Urbanización San Blas I, Valencia, estado Carabobo, Venezuela, zona postal 2001',
   registro:
     'inscrita en el Registro Mercantil Primero del Estado Carabobo el 21 de octubre de 2026, bajo el N.° 21, Tomo 243-A, expediente N.° 314-82446',
   whatsapp: '+58 422 7765777',
