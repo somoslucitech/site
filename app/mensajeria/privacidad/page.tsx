@@ -80,40 +80,13 @@ export default function MessagingPrivacyPage() {
       </p>
 
       <h2>6. Con quién compartimos datos</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Proveedor</th>
-            <th>Para qué</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Meta Platforms (WhatsApp Business Platform)</td>
-            <td>Envío y recepción de los mensajes</td>
-          </tr>
-          <tr>
-            <td>Cloudflare</td>
-            <td>Alojamiento, archivos y protección contra ataques</td>
-          </tr>
-          <tr>
-            <td>DigitalOcean</td>
-            <td>Servidores y base de datos</td>
-          </tr>
-          <tr>
-            <td>Anthropic</td>
-            <td>Solo si la empresa activa el asistente automático: generación de respuestas</td>
-          </tr>
-          <tr>
-            <td>Resend</td>
-            <td>Correos de servicio (avisos y confirmaciones)</td>
-          </tr>
-        </tbody>
-      </table>
       <p>
-        Estos proveedores están en su mayoría en los Estados Unidos, por lo que los datos pueden transferirse fuera de
-        Venezuela. Solo les entregamos lo necesario para prestar el servicio. También podemos revelar datos cuando lo exija
-        una autoridad competente conforme a la ley.
+        Los mensajes viajan por la plataforma de WhatsApp Business de Meta. Además, nos apoyamos en proveedores de
+        tecnología (alojamiento, base de datos, envío de correos y, si la empresa activa el asistente automático, un
+        servicio de inteligencia artificial) que solo reciben lo necesario para prestar el servicio y no pueden usarlo para
+        otros fines. Algunos están fuera de Venezuela, principalmente en los Estados Unidos, por lo que los datos pueden
+        transferirse fuera del país. También podemos revelar datos cuando lo exija una autoridad competente conforme a la
+        ley.
       </p>
 
       <h2>7. Cuánto tiempo los guardamos</h2>
